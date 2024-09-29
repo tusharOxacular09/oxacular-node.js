@@ -17,7 +17,14 @@ app.get("/", (req: Request, res: Response) => {
   res.render("welcome");
 });
 
+app.get("/get-started", (req: Request, res: Response) => {
+  res.send("Getting Started ....🤖!");
+});
+
 // Listening application on port 7000.
 app.listen(process.env.PORT || 7000, () => {
   console.log(`Server started at PORT ${process.env.PORT} 🚀.`);
 });
+
+// exporting the application
+export default app;

@@ -17,6 +17,9 @@ app.set("views", path_1.default.join(path_1.default.resolve("src", "views")));
 app.get("/", (req, res) => {
     res.render("welcome");
 });
+app.get("/get-started", (req, res) => {
+    res.send("Getting Started ....🤖!");
+});
 // Listening application on port 7000.
 app.listen(process.env.PORT || 7000, () => {
     console.log(`Server started at PORT ${process.env.PORT} 🚀.`);

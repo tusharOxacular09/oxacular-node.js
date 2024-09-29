@@ -1,5 +1,5 @@
 Typescript Configuration
-
+************************
 1. npm i -D typescript @types/express @types/node
 2. npx tsc --init
 3. Configure tsconfig.json
@@ -16,3 +16,10 @@ Typescript Configuration
     "exclude": ["node_modules"]      // Exclude the node_modules folder
   }
 4. npx tsc
+
+
+Unit Testing Setup
+******************
+1. npm i -D jest ts-jest @types/jest
+2. npm i -D supertest
+3. npx ts-jest config:init
