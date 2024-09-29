@@ -1,0 +1,11 @@
+{
+  "name": "oxacular-node",
+  "version": "1.0.0",
+  "description": "Node.js Application",
+  "main": "server.ts",
+  "scripts": {
+    "test": "start"
+  },
+  "author": "Oxacular",
+  "license": "ISC"
+}
