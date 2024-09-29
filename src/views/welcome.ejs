@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Welcome</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      /* Reset and basic styles */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Poppins", sans-serif;
+        background: linear-gradient(135deg, #7b2ff7, #f107a3);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        padding: 20px;
+        color: white;
+      }
+
+      .welcome-container {
+        background: linear-gradient(145deg, #ffffff, #f2f2f2);
+        padding: 50px;
+        border-radius: 20px;
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+        max-width: 600px;
+        width: 100%;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .welcome-container::before {
+        content: "";
+        position: absolute;
+        top: -50%;
+        left: -50%;
+        width: 300%;
+        height: 300%;
+        background: radial-gradient(
+          circle,
+          rgba(255, 255, 255, 0.1),
+          transparent
+        );
+        animation: rotateBackground 15s infinite linear;
+      }
+
+      @keyframes rotateBackground {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+
+      .welcome-title {
+        font-size: 2.5rem;
+        font-weight: 700;
+        background: linear-gradient(90deg, #7b2ff7, #f107a3);
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      .welcome-subtitle {
+        font-size: 1.3rem;
+        color: #555;
+        margin-top: 10px;
+        margin-bottom: 30px;
+        font-weight: 500;
+      }
+
+      .welcome-message {
+        font-size: 1.3rem;
+        font-weight: 400;
+        color: #333;
+        margin-bottom: 40px;
+        line-height: 1.6;
+      }
+
+      .cta-btn {
+        display: inline-block;
+        background: linear-gradient(45deg, #f107a3, #7b2ff7);
+        color: white;
+        padding: 15px 35px;
+        border-radius: 50px;
+        font-size: 1.1rem;
+        font-weight: 600;
+        text-decoration: none;
+        transition: all 0.4s ease;
+        box-shadow: 0 10px 25px rgba(123, 47, 247, 0.5);
+        cursor: pointer;
+        position: relative;
+      }
+
+      .cta-btn:hover {
+        background: linear-gradient(45deg, #7b2ff7, #f107a3);
+        box-shadow: 0 15px 30px rgba(241, 7, 163, 0.7);
+      }
+
+      /* Mobile responsive adjustments */
+      @media (max-width: 600px) {
+        .welcome-container {
+          padding: 30px;
+        }
+
+        .welcome-title {
+          font-size: 2rem;
+        }
+
+        .welcome-message {
+          font-size: 1.1rem;
+        }
+
+        .cta-btn {
+          padding: 12px 25px;
+          font-size: 1rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="welcome-container">
+      <h1 class="welcome-title">Welcome to Our Service!</h1>
+      <p class="welcome-subtitle">We are thrilled to have you here.</p>
+      <p class="welcome-message">
+        Explore our platform with confidence. If you need any help, feel free to
+        reach out!
+      </p>
+      <a href="#" class="cta-btn" id="getStartedBtn">Get Started</a>
+    </div>
+  </body>
+</html>

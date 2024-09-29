@@ -4,8 +4,22 @@
   "description": "Node.js Application",
   "main": "server.ts",
   "scripts": {
-    "test": "start"
+    "build": "npx tsc",
+    "start": "npm run build && node dist/server.js",
+    "dev": "nodemon src/server.ts"
   },
   "author": "Oxacular",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "ejs": "^3.1.10",
+    "express": "^4.21.0"
+  },
+  "devDependencies": {
+    "@types/dotenv": "^8.2.0",
+    "@types/express": "^5.0.0",
+    "@types/node": "^22.7.4",
+    "nodemon": "^3.1.7",
+    "typescript": "^5.6.2"
+  }
 }
