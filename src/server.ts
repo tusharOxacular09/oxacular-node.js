@@ -1,6 +1,7 @@
 import express, { Express, Request, Response } from "express";
 import path from "path";
 import dotenv from "dotenv";
+
 dotenv.config();
 
 // Craeting an instance of express
@@ -21,10 +22,12 @@ app.get("/get-started", (req: Request, res: Response) => {
   res.send("Getting Started ....🤖!");
 });
 
-// Listening application on port 7000.
-app.listen(process.env.PORT || 7000, () => {
-  console.log(`Server started at PORT ${process.env.PORT} 🚀.`);
-});
+// Only start the server if the module is run directly
+if (require.main === module) {
+  app.listen(process.env.PORT || 7000, () => {
+    console.log(`Server started at PORT ${process.env.PORT} 🚀.`);
+  });
+}
 
 // exporting the application
 export default app;
