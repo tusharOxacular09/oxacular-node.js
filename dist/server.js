@@ -24,3 +24,5 @@ app.get("/get-started", (req, res) => {
 app.listen(process.env.PORT || 7000, () => {
     console.log(`Server started at PORT ${process.env.PORT} 🚀.`);
 });
+// exporting the application
+exports.default = app;
